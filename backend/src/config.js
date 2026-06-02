@@ -23,7 +23,14 @@ export const config = {
   maxFileSizeBytes: toInt(process.env.MAX_FILE_SIZE_MB, 25) * 1024 * 1024,
   maxFilesPerRequest: toInt(process.env.MAX_FILES_PER_REQUEST, 200),
 
+  maxVideoFileSizeBytes: toInt(process.env.MAX_VIDEO_FILE_SIZE_MB, 500) * 1024 * 1024,
+  maxVideosPerRequest: toInt(process.env.MAX_VIDEOS_PER_REQUEST, 10),
+
+  maxExtractorZipSizeBytes: toInt(process.env.MAX_EXTRACTOR_ZIP_SIZE_MB, 4096) * 1024 * 1024,
+
   processingConcurrency: toInt(process.env.PROCESSING_CONCURRENCY, 4),
+  videoConcurrency: toInt(process.env.VIDEO_CONCURRENCY, 1),
+  extractorConcurrency: toInt(process.env.EXTRACTOR_CONCURRENCY, 4),
 
   cleanup: {
     maxAgeMinutes: toInt(process.env.CLEANUP_MAX_AGE_MINUTES, 60),

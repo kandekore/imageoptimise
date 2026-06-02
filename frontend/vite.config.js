@@ -14,6 +14,8 @@ export default defineConfig(({ mode }) => {
         '/preview': { target: backend, changeOrigin: true },
         '/download': { target: backend, changeOrigin: true },
         '/health': { target: backend, changeOrigin: true },
+        '/video': { target: backend, changeOrigin: true },
+        '/extracts': { target: backend, changeOrigin: true },
       },
     },
   };
